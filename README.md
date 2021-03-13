@@ -1,3 +1,7 @@
+Setup for Manjaro XFCE
+
+---
+
 ### Introduction
 This is my attempt to gather all the information in one place on how to support the [Chuwi Hi10 Pro](http://en.chuwi.com/product/items/Chuwi-Hi10-Pro.html) tablet on Linux.
 
