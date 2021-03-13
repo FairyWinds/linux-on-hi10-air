@@ -5,9 +5,27 @@ Deploy driver
 `cp gsl1680-chuwi-hi10-air.fw mssl1680.fw`  
 Schedule `touch_rotation.sh` to run after log in
 
+## Useful packages
+* okular - screen reader for PDF, ebooks, with touch scrolling support
+* xournal - support for stylus with draw and eraser functions
+* xserver-xorg-input-wacom - Wacom tablet support for Xorg
+* xserver-xorg-input-multitouch - for multi-touch input
+* [touchegg](https://www.linux.com/learn/how-configure-touchscreen-linux) - gesture
+
+## Virtual Keyboards
+| Keyboard | auto hide | word completion | transparency | handwrite |
+| :------- | :-------- | --------------- | :----------- | :-------- |
+| [GOK](http://www.gok.ca/gok) | yes | yes | no | no |
+| [Florence](http://florence.sourceforge.net/english/alternatives.html) | yes | no | yes | no |
+| [Onboard](https://launchpad.net/onboard) | no | no | no | no |
+| [XVKBD](http://homepage3.nifty.com/tsato/xvkbd) | no | yes | no | no |
+| [Caribou](https://wiki.gnome.org/action/show/Projects/Caribou?action=show&redirect=Caribou) | ??? | ??? | ??? | no |
+| [CellWriter](https://github.com/risujin/cellwriter) | ??? | ??? | ??? | yes |
+
+
 ---
 
-### Touchscreen configuration
+# ORIGINAL Touchscreen configuration
 From linux 4.15 on, the `silead` mainline kernel module should work ok, as long as you provide a valid firmware.
 Different firmwares can be downloaded from [onitake/gsl-firmware](https://github.com/onitake/gsl-firmware)
 (the ones named `firmware.fw`).
@@ -16,7 +34,7 @@ The firmware needs to be copied to `/usr/lib/firmware/silead/` with a custom nam
 see the DMI match expressions and the corresponding driver properties.
 
 
-### Adapting kernel driver
+## Adapting kernel driver
 It the driver doesn't work right, you can try tunning the driver parameters. This folder contains a copy
 of the [silead kernel driver](https://github.com/torvalds/linux/blob/master/drivers/input/touchscreen/silead.c)
 modified with some functions to tune the driver.
@@ -30,7 +48,7 @@ Then:
 
 
 
-### Calibration
+## Calibration
 Another way of calibrating is using the `libinput` driver. My previous device calibration matrix is stored in
 [50-touchscreen.rules](https://raw.githubusercontent.com/danielotero/linux-on-hi10/master/touchscreen/50-touchscreen.rules),
 which is an [udev rules](https://wiki.archlinux.org/index.php/Udev) configuration file that must be copied to
@@ -58,7 +76,7 @@ xinput --map-to-output "$TOUCHSCREEN" "$OUTPUT"
 
 ```
 
-#### Calibration process
+## Calibration process
 The calibration process was done manually using the description found
 [here](https://wayland.freedesktop.org/libinput/doc/1.2.1/group__config.html#ga09a798f58cc601edd2797780096e9804).
 For my screen the values were interpreted as follows:
