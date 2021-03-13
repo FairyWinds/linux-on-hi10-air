@@ -2,11 +2,13 @@
 From linux 4.15 on, the `silead` mainline kernel module should work ok, as long as you provide a valid firmware.
 Different firmwares can be downloaded from [onitake/gsl-firmware](https://github.com/onitake/gsl-firmware)
 (the ones named `firmware.fw`).
-The closest one to my tablet is
-[this one](https://github.com/onitake/gsl-firmware/raw/master/firmware/chuwi/hi10-pro-z8350-Hi10_HQ64G42170704809/firmware.fw).
 
 The firmware needs to be copied to `/usr/lib/firmware/silead/` with a custom name depending on the device (or `mssl1680.fw` by default). Take a look at [silead_dmi.c](https://github.com/torvalds/linux/blob/cacd9759eea2f1c7e8792ecd91ed4602f963b1a5/drivers/platform/x86/silead_dmi.c) to
 see the DMI match expressions and the corresponding driver properties.
+
+cd /lib/firmware/silead/
+cp gsl1680-chuwi-hi10-air.fw mssl1680.fw
+
 
 ### Adapting kernel driver
 It the driver doesn't work right, you can try tunning the driver parameters. This folder contains a copy
