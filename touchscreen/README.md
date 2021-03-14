@@ -1,5 +1,5 @@
 ### My config
-Get touch driver from [onitake/gsl-firmware](https://github.com/onitake/gsl-firmware).  
+Touch driver from [onitake/gsl-firmware](https://github.com/onitake/gsl-firmware) is not working for me, but in `driver/` is driver which works for me - taken from [gsl1680-chuwi-hi10-air.fw](https://github.com/onitake/gsl-firmware/blob/master/firmware/linux/silead/gsl1680-chuwi-hi10-air.fw)   
 Deploy driver  
 `cd /lib/firmware/silead/`  
 `cp gsl1680-chuwi-hi10-air.fw mssl1680.fw`  
