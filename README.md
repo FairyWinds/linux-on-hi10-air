@@ -1,4 +1,4 @@
-Setup for Manjaro XFCE
+Setup for Manjaro XFCE with open source drivers only
 
 ---
 
