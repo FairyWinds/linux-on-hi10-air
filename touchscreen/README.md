@@ -1,9 +1,48 @@
-### My config
-Touch driver from [onitake/gsl-firmware](https://github.com/onitake/gsl-firmware) is not working for me, but in `driver/` is driver which works for me - taken from [gsl1680-chuwi-hi10-air.fw](https://github.com/onitake/gsl-firmware/blob/master/firmware/linux/silead/gsl1680-chuwi-hi10-air.fw)   
-Deploy driver  
-`cd /lib/firmware/silead/`  
-`cp gsl1680-chuwi-hi10-air.fw mssl1680.fw`  
-Schedule `touch_rotation.sh` to run after log in
+# Gnome touchscreen tracker (bugs, features, ideas)
+https://wiki.gnome.org/Design/OS/Touchscreen
+# XDA Developers
+https://forum.xda-developers.com/t/chuwi-hi10-air-linux-installation-guide.3915804/
+# My config for Gnome
+Graphic performance is lagging
+## Touch driver
+### Get driver
+Touch driver from root chuwi folder [onitake/gsl-firmware/tree/master](https://github.com/onitake/gsl-firmware/tree/master/firmware/chuwi) is not working for me, but in `driver/` is driver which works for me - taken from [onitake/gsl-firmware/blob/../gsl1680-chuwi-hi10-air.fw](https://github.com/onitake/gsl-firmware/blob/master/firmware/linux/silead/gsl1680-chuwi-hi10-air.fw)   
+
+### Install touch driver
+Copy to folder `/lib/firmware/silead/` with default name `mssl1680.fw`  
+``` 
+cd /lib/firmware/silead/  
+sudo cp ~/Downloads/gsl1680-chuwi-hi10-air.fw mssl1680.fw
+```
+
+### [Correct driver rotation after log in for all users](https://help.gnome.org/admin/system-admin-guide/stable/autostart-applications.html.en)
+Download `touch_rotation.sh`
+
+Create a file in `/etc/xdg/autostart/` with the `.desktop` extension.
+
+```
+[Desktop Entry]
+Name=ScreenRotation
+GenericName=Screen Rotator
+Comment=Screen rotation for Chuwi Hi10 Air
+Exec=sh /<path_to>/touch_rotation.sh
+Terminal=false
+Type=Application
+X-GNOME-Autostart-enabled=true
+```
+
+## [Screen scalling (fixes small icons in App Launcher)](https://forum.manjaro.org/t/fractional-scaling-in-gnome/22195)
+### X11 
+Install mutter with scalling fix   
+  ```
+  sudo pacman -S mutter-x11-sc
+  ```
+Enable experimental fractational scalling   
+  ```
+  gsettings set org.gnome.mutter experimental-features "['x11-randr-fractional-scaling']"
+  ```
+Reboot   
+In settings you can find 125%,150%,175% display scale
 
 ## Useful packages
 * okular - screen reader for PDF, ebooks, with touch scrolling support
