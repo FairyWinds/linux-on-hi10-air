@@ -1,5 +1,8 @@
 ![Index image](img/index.png)
 
+## What is new?
+[Adventures in Linux and KDE](https://pointieststick.com/)
+
 ## Touch driver
 ### Get driver
 Touch driver from root chuwi folder [onitake/gsl-firmware/tree/master](https://github.com/onitake/gsl-firmware/tree/master/firmware/chuwi) is not working for me, but in `driver/` is driver which works for me - taken from [onitake/gsl-firmware/blob/../gsl1680-chuwi-hi10-air.fw](https://github.com/onitake/gsl-firmware/blob/master/firmware/linux/silead/gsl1680-chuwi-hi10-air.fw)    
