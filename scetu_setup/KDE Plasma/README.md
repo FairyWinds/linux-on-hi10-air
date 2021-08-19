@@ -28,7 +28,6 @@ Create `/lib/udev/hwdb.d/61-sensor-local.hwdb` with mount matrix, this works for
 # Chuwi Hi10 Air
 sensor:modalias:acpi:BOSC0200*:dmi:*
  ACCEL_MOUNT_MATRIX=0, -1, 0; -1, 0, 0; 0, 0, 1
-
 ```
 
 Now update config and trigger
