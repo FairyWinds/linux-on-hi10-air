@@ -75,5 +75,5 @@ Onboard
 
 ---
 ## Helpful links
-[Arch Linux Docs](https://wiki.archlinux.org/title/Tablet_PC)
-[Manjaro Forum Thread](https://archived.forum.manjaro.org/t/x64-x86-tablet-howto-draft-for-a-wiki-page-help-appreciated/121979/11)
++ [Arch Linux Docs](https://wiki.archlinux.org/title/Tablet_PC)
++ [Manjaro Forum Thread](https://archived.forum.manjaro.org/t/x64-x86-tablet-howto-draft-for-a-wiki-page-help-appreciated/121979/11)
