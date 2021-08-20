@@ -29,6 +29,10 @@ DRIVERS=="silead_ts" ENV{LIBINPUT_CALIBRATION_MATRIX}="2.1746 0 -0.0438 0 -3.276
 
 Currently I dont know how to rotate touchscreen with screen itself, while screen rotation works, touch calibration remains same for Landscape mode. So touch is not working properly and is locked to only one screen Orientation.
 
+### Touch screen extras
+TouchscreenExtras is a free tool than can provide you with all essential features you need to control your device using touchscreen. It is meant for X11 Linux desktops that do not support some essential touchscreen features. Built for and tested on KDE.
+[KDE Touch screens extras](https://gitlab.com/piotrintes/touchscreenextras)
+
 ## Screen rotation
 Install `iio-sensor-proxy-git` and `kded-rotation-git` from AUR. [source](https://wiki.archlinux.org/title/Tablet_PC#With_a_KDE_module)
 
@@ -60,10 +64,11 @@ Reboot and tablet speakers should be recognized again.
 ## Virtual keyboard
 Onboard
 
+
 ## Other
-Screen Scaling - 150%
-Use "Application Dashboard" (full-screen) as app launcher
-Disable Compositor on startup and set it to Smooth and Preffer Low Latency
++ Screen Scaling - 150%
++ Use "Application Dashboard" (full-screen) as app launcher
++ Disable Compositor on startup and set it to Smooth and Preffer Low Latency
 
 ---
 ## Screenshots
